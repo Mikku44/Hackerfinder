@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDD1608B6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CXDD1608B6');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secureit | lv.4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'VT323';
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5759479769709455"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-black text-white">
+
+    <dialog id="hint" class="mt-10">
+        <div class="text-xl">Hint#</div>
+        <div>Let's asking to teacher google how to view the <b>source code</b>.</div>
+        <br>
+        <input type="button" class="ring-gray-800 ring-1 px-2 mr-4 hover:bg-black hover:text-white" value="I know"
+            onclick="hint.toggleAttribute('open');">
+    </dialog>
+    <div class="fixed left-5 bottom-5"><input type="button"
+            class="ring-1 ring-gray-200 px-10 hover:bg-white hover:text-black " onclick="hint.toggleAttribute('open');"
+            value="Hint"></div>
+    <div id="timer" class="right-10 bottom-5 fixed text-xl">00:00s</div>
+    <button class="left-0 fixed" id="lev" value="4">lv.4</button>
+    <div class="right-0 fixed">version 1.0 beta</div>
+    <div class="flex flex-col  justify-center text-center  p-10">
+        <h1 class=" text-6xl center">Secureit.fun</h1>
+
+
+        <form class="mt-10 flex flex-col gap-5  justify-center" action="" enctype="multipart/form-data">
+            <h1>Note :This website has been hacked again,so we just added a little bit of security.**</h1>
+            <div><label for="username">Username</label> <input id="username" required
+                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="text"></div>
+            <div><label for="password">Password</label> <input id="password" required
+                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="password"></div>
+            <div><a href="forgot.html"><input class="underline cursor-pointer" type="button"
+                        value="Forgot password"></a></div>
+            <div><input type="button" id="submit" class="ring-1 ring-gray-200 px-28 hover:text-black hover:bg-white"
+                    value="login"></div>
+        </form>
+    </div>
+</body>
+<script>
+
+
+    function ctrlShiftKey(e, keyCode) {
+        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+    }
+
+
+</script>
+<script src="node_modules/devtools-detector/lib/devtools-detector.js"></script>
+
+<script id="login">
+
+
+    devtoolsDetector.addListener(function (isOpen) {
+        msg = isOpen
+            ? 'devtools status: open'
+            : 'devtools status: close';
+        // alert(msg);
+        login.remove();
+        alert('Hacking Detected!!')
+        window.location.reload();
+    });
+    devtoolsDetector.launch();
+
+    document.onkeydown = (e) => {
+        // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+        if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+        )
+            return false;
+    };
+
+    // Disable right-click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    submit.addEventListener('click', (e) => {
+
+        if (username.value === 'mikey' && password.value === 'mikeyza001') {
+            alert("Oh no why you so smart like this bro..!!!");
+            window.location.href = '/ohiyo.html';
+
+        }
+        else {
+            alert('Please enter username and password again.');
+        }
+    })
+</script>
+<script src="app.js"></script>
+
+</html>

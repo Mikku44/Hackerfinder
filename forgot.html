@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secureit | Forgot password</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'VT323';
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5759479769709455"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-black text-white">
+
+
+    <div id="timer" class="right-10 bottom-5 fixed text-xl">00:00s</div>
+    <!-- <button class="left-0 fixed" id="lev" value="4">lv.4</button> -->
+    <div class="right-0 fixed">version 1.0 beta</div>
+    <div class="flex flex-col  justify-center text-center  p-10">
+        <h1 class=" text-6xl center">Secureit.fun</h1>
+
+
+        <form class="mt-10 flex flex-col gap-5  justify-center" action="" enctype="multipart/form-data">
+            <h1>Note :If you cannot login try this and you will change the password.**</h1>
+            <div><label for="username">Username</label> <input id="username" required
+                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="text"></div>
+           
+            <div><input type="button" id="submit" class="ring-1 ring-gray-200 px-28 hover:bg-white hover:text-black" value="Send password"></div>
+        </form>
+    </div>
+</body>
+<script>
+    submit.addEventListener("click", function(e){
+        alert("Not found this username");
+    });
+  
+    // Disable right-click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    function ctrlShiftKey(e, keyCode) {
+        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+    }
+
+    document.onkeydown = (e) => {
+        // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+        if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+        )
+            return false;
+    };
+</script>
+<script src="app.js"></script>
+
+</html>
