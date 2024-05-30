@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "devtools-detector": "^2.0.14"
+    "devtools-detector": "^2.0.14",
+    "js-md5": "^0.8.3"
   }
 }
