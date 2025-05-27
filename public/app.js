@@ -1,56 +1,58 @@
 
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
+    getEnv()
+    if (document.cookie) { //accepted
 
-    if (document.cookie == '') { //accepted
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            if (localStorage.first === undefined) localStorage.setItem("first", now);
+            var distance = now - localStorage.first;
+
+
+            var seconds = Math.floor(distance / 1000);
+
+
+            timer.innerHTML = seconds + "s ";
+
+
+
+        });
+
+    } else {
         m.toggleAttribute('open');
-        
-        
-    } else{
-        x;
     }
-    
-    if(document.getElementById("secret") !== undefined){
+
+    if (document.getElementById("secret") !== undefined) {
         console.log("tset");
     }
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-    
-      // Get today's date and time
-      var now = new Date().getTime();
-        
-      // Find the distance between now and the count down date
-      if(localStorage.first === undefined) localStorage.setItem("first",now);
-      var distance = now - localStorage.first;
-        
-    
-      var seconds = Math.floor(distance/1000 );
-        
-  
-      timer.innerHTML =  seconds + "s ";
-        
-    
-      
-    });
 
-    
+
+
 }
 );
 
 function setLevel(level) {
     document.cookie = 'level=' + level;
-    
+
 }
 
-function Setcookie(){
+function Setcookie() {
     m.toggleAttribute('open');
+    document.cookie = "cookie=1,level=7;"
 }
 
-function goToNext(url){
+function goToNext(url) {
     document.location.replace(url);
 }
 
-function logIn(){
+function logIn() {
     console.log(username.value, password.value);
 
     if (username.value == 'admin' && (password.value == 'passwordIspassword')) {
@@ -82,3 +84,27 @@ function caesarCipher(text, shift) {
         return char;
     }).join('');
 }
+
+
+async function getEnv() {
+    const response = await fetch("simulator.env");
+    if (!response.ok) {
+        throw new Error('Failed to load environment file');
+    }
+    const text = await response.text();
+    return text;
+}
+
+// function parseEnv(envText) {
+//     const lines = envText.split(/\r?\n/); // Split by newlines
+//     const envVars = {};
+    
+//     lines.forEach(line => {
+//         const [key, value] = line.split("=").map(part => part.trim());
+//         if (key) {
+//             envVars[key] = value ? value.replace(/"/g, '') : '';
+//         }
+//     });
+
+//     return envVars;
+// }

@@ -2,27 +2,16 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDD1608B6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-CXDD1608B6');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secureit | lv.5</title>
+    <title>Secureit | Coming Soon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <script>
-
-        window.location.search == '?noway' ? alert("Something was wrong here!, Please try again!!") : console.log("let's Start");
-
-    </script>
+    <link href="assets/css/style.css" rel="stylesheet">
+   
     <style>
         * {
             font-family: 'VT323';
@@ -42,11 +31,8 @@
 
     <dialog id="hint" class="mt-10 w-[50vw] p-10">
         <div class="text-xl">Hint#</div>
-        <div>MD5 is a hash function "one-way algorithm" that can be used to transform "common text" to "something that
-            looks like weird".</div>
-        <div class="font-bold">Example : </div>
-        <div class="font-italic inline-flex">"HI" >>> "bf8c144140b15befb8ce662632a7b76e"</div>
-        <div>this is how it output when we hash "HI" word with MD5.</div>
+        <div>It's look like <b>Caesar cipher</b> technique.</div>
+        <div>A Caesar cipher is a simple method of encoding messages.</div>
         <div>Note : I can not pass this level too. i don't know how to do that bro Sorry</div>
         <br>
         <input type="button" class="ring-gray-800 ring-1 px-2 mr-4 hover:bg-black hover:text-white" value="I know"
@@ -56,49 +42,31 @@
             class="ring-1 ring-gray-200 px-10 hover:bg-white hover:text-black " onclick="hint.toggleAttribute('open');"
             value="Hint"></div>
     <div id="timer" class="right-10 bottom-5 fixed text-xl">00:00s</div>
-    <button class="left-0 fixed" id="lev" value="5">lv.5</button>
+    <button class="left-0 fixed" id="lev" value="7">lv.7</button>
     <div class="right-0 fixed">version 1.0 beta</div>
     <div class="flex flex-col  justify-center text-center  p-10">
         <h1 class=" text-6xl center">Secureit.fun</h1>
 
 
-        <div class="mt-10 flex flex-col gap-5  justify-center" enctype="multipart/form-data">
-            <h1>Note :we have to use other way to protect data.**</h1>
-            <div><label for="username">Username</label> <input id="username" name="username" required
+        <div class="mt-10 flex flex-col gap-5  justify-center">
+            <h1>Note :We will notice you when we already update.**</h1>
+            <div class="text-4xl">COMMING SOON.</div>
+            <div class="w-full invert flex justify-center " style="animation:scale 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;"><img class="w-14 " src="assets/images/star.png" alt=""></div>
+            <!-- <div><label for="plainText">plainText</label> <input id="plainText" name="plainText" required
                     class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="text"></div>
-            <div><label for="password">Password</label> <input id="password" name="password" required
-                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="password"></div>
-            <div class="pointer"><a href="forgot.html"><input class="cursor-pointer underline " type="button"
-                        value="Forgot password"></a></div>
+         
+         
             <div><input type="submit" id="submit" class="ring-1 ring-gray-200 px-28 hover:text-black hover:bg-white"
-                    value="login"></div>
+                    value="login"></div> -->
         </div>
     </div>
 </body>
 
 
 
-<script id="secret">
 
-
-    submit.addEventListener("click", e => {
-
-        if (md5(username.value) === "60536c574b951e4efeea287704982f46" && md5(password.value) === '60536c574b951e4efeea287704982f46') {
-            alert(`This is next page :${md5(md5(username.value))}`);
-            goToNext(`${md5(md5(username.value))}.html`);
-        } else {
-            alert("wrong");
-        }
-
-
-
-
-    })
-
-
-
-</script>
+  
 <script src="app.js"></script>
-<script src="assets/js/md5.min.js"></script>
+
 
 </html>

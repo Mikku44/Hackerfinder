@@ -11,10 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/texarcss.js"></script>
     <script>
-
-        window.location.search == '?noway' ? alert("Something was wrong here!, Please try again!!") : console.log("let's Start");
-
+        applyAnimations()
     </script>
     <style>
         * {
@@ -26,21 +25,23 @@
 </head>
 
 <body class="bg-black text-white">
-    <dialog id="m">
+    <dialog id="m" class="p-5">
         <div class="text-xl">Cookie alert</div>
         <div>This website will collect your cookies to keep progression.</div><br>
         <input type="button" class="ring-gray-800 ring-1 px-2 mr-4" value="accept" onclick="Setcookie()">
         <input type="button" class=" px-2" value="not accept" onclick="m.toggleAttribute('open');">
     </dialog>
 
-    <dialog id="hint" class="mt-10 w-[50vw] p-10">
-        <div class="text-xl">Hint#</div>
-        <div>It's look like <b>Caesar cipher</b> technique.</div>
-        <div>A Caesar cipher is a simple method of encoding messages.</div>
-        <div>Note : I can not pass this level too. i don't know how to do that bro Sorry</div>
-        <br>
-        <input type="button" class="ring-gray-800 ring-1 px-2 mr-4 hover:bg-black hover:text-white" value="I know"
-            onclick="hint.toggleAttribute('open');">
+    <dialog id="hint" class="mt-10 w-[50vw]">
+        <div class="p-10">
+            <div class="text-xl">Hint#</div>
+            <div>It's look like <b>Caesar cipher</b> technique.</div>
+            <div>A Caesar cipher is a simple method of encoding messages.</div>
+            <div>Note : I can not pass this level too. i don't know how to do that bro Sorry</div>
+            <br>
+            <input type="button" class="ring-gray-800 ring-1 px-2 mr-4 hover:bg-black hover:text-white" value="I know"
+                onclick="hint.toggleAttribute('open');">
+        </div>
     </dialog>
     <div class="fixed left-5 bottom-5"><input type="button"
             class="ring-1 ring-gray-200 px-10 hover:bg-white hover:text-black " onclick="hint.toggleAttribute('open');"
@@ -49,47 +50,37 @@
     <button class="left-0 fixed" id="lev" value="7">lv.7</button>
     <div class="right-0 fixed">version 1.0 beta</div>
     <div class="flex flex-col  justify-center text-center  p-10">
-        <h1 class=" text-6xl center">Secureit.fun</h1>
-
-
-        <div class="mt-10 flex flex-col gap-5  justify-center">
-            <h1>Note :We will notice you when we already update.**</h1>
-            <div class="text-4xl">COMMING SOON.</div>
-            <div class="w-full invert flex justify-center " style="animation:scale 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;"><img class="w-14 " src="assets/images/star.png" alt=""></div>
-            <!-- <div><label for="plainText">plainText</label> <input id="plainText" name="plainText" required
-                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="text"></div>
-         
-         
-            <div><input type="submit" id="submit" class="ring-1 ring-gray-200 px-28 hover:text-black hover:bg-white"
-                    value="login"></div> -->
+        <div class="flex justify-center ">
+            <h1 class=" text-6xl center animate-[random] infinite-[1] separate duration-[3000] ">Secureit.fun</h1>
         </div>
+        <div class="mt-10 flex flex-col gap-5  justify-center">
+
+            <div class="text-4xl">DB Admin</div>
+            <div>
+                <label for="username">username</label>
+                <input id="username" name="username" required
+                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="text">
+            </div>
+            <div>
+                <label for="password">password</label>
+                <input id="password" name="password" required
+                    class="text-green-800 px-2 ring-1 ring-gray-200 rounded-sm" type="text">
+            </div>
+
+
+            <div><input type="submit" id="submit" class="ring-1 ring-gray-200 px-28 hover:text-black hover:bg-white"
+                    value="login" onclick="login()"></div>
+        </div>
+
+
     </div>
 </body>
 
 
 
-<script id="secret">
-  
-
-    submit.addEventListener("click", e => {
-
-        if ((username.value) === caesarCipher(username.value)) {
-            alert("correct");
-            goToNext(md5(username.value));
-
-        } else {
-            alert("wrong");
-        }
 
 
-
-
-    })
-
-
-
-</script>
 <script src="app.js"></script>
-<script src="assets/js/md5.min.js"></script>
+
 
 </html>
